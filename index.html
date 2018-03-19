@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+    <script src="./assets/javascript/cors-anywhere.js"></script>
+    <script src="./assets/javascript/tests.js"></script>
+    <script src="./assets/javascript/activity.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCjIfkvFTUl4ZaOKePZUiOc6SxlH8bhkss",
+            authDomain: "letseat-258fe.firebaseapp.com",
+            databaseURL: "https://letseat-258fe.firebaseio.com",
+            projectId: "letseat-258fe",
+            storageBucket: "letseat-258fe.appspot.com",
+            messagingSenderId: "1090197471419"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body" data-bind="foreach: users">
+                        <h5 class="card-title" data-bind="text: activity().activityName ">pizza hut</h5>
+                        <ul>
+                            <li class="card-text" data-bind="text: name"></li>
+                        </ul>
+
+                        <a href="#" class="btn btn-primary">Join</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
